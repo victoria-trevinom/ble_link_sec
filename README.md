@@ -9,9 +9,12 @@
  -    **1. Intercepción de trafico** Dado que los dispositivos BLE se comunican en el canal inalámbrico, cualquier persona con un dispositivo de análisis de paquetes, como Ubertooth o SmartRF Sniffer, puede interceptar la comunicación. Se recomienda a los usuarios utilizar opciones de emparejamiento seguras, como la comparación numérica, el acceso fuera de rango o, al menos, la introducción de una clave de acceso.
 -    **2. Ataques de Hombre en el Medio (MitM):** Aquí si el mecanismo de emparejamiento o vinculación es débil, un dispositivo malicioso puede suplantar la identidad de la laptop y/o celular y hasta modificar y alterar el flujo de datos.
 
+## Reglas de Seguridad y Legalidad
 
- ## Reglas de Seguridad y Legalidad
-
+- **Uso ético y autorizado:** Las herramientas y scripts desarrollados en este proyecto (como `test_ble.py`) están diseñados exclusivamente con fines académicos y de prueba en entornos controlados, utilizando dispositivos propios para validar conceptos de conectividad de bajo consumo (BLE).
+- **Cumplimiento normativo:** Las pruebas de conectividad inalámbrica y la manipulación de interfaces de red deben realizarse respetando las normativas locales vigentes y los marcos regulatorios aplicables a las telecomunicaciones.
+- **Privacidad de los datos:** Queda estrictamente prohibido el escaneo no autorizado, la captura de tráfico o la interacción maliciosa con dispositivos pertenecientes a terceros sin su consentimiento explícito.
+- **Responsabilidad del usuario:** Los integrantes del equipo son responsables de garantizar que cualquier ejecución de código o prueba de concepto se realice de manera segura, evitando afectaciones a redes ajenas o equipos externos.
  - **
 
  ## 🚀 Guía Rápida: Cómo descargar y probar el enlace BLE
