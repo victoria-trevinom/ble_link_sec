@@ -13,3 +13,17 @@
  ## Reglas de Seguridad y Legalidad
 
  - **
+
+ ## 🚀 Guía Rápida: Cómo descargar y probar el enlace BLE
+
+Si vas a probar el programa en tu computadora para verificar la comunicación con tu teléfono, sigue estos sencillos pasos:
+
+### 1. Requisitos previos
+* Tener Python instalado en tu computadora (asegúrate de marcar la casilla *"Add Python to PATH"* durante su instalación).
+* Tener Git instalado (o puedes descargar este repositorio directamente como un archivo ZIP desde el botón verde **"Code"** arriba en GitHub y descomprimirlo en tu computadora).
+
+### 2. Abrir la terminal
+* Abre tu terminal de comandos (en Windows busca **PowerShell** o **Símbolo del sistema**).
+* Colócate en la carpeta donde descargaste o clonaste el proyecto. Por ejemplo, si lo guardaste en tu Escritorio:
+  ```bash
+  cd Desktop/ble_link_sec
