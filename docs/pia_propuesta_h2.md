@@ -62,7 +62,14 @@ flowchart LR
 - **Enlace al Video:** `[Insertar enlace de evidencia: Google Drive / OneDrive / YouTube]`
 
 ### 2.2 Fuentes Verificables (Formato IEEE)
+---
 
+## 1.4 Referencias Bibliográficas
+
+[1] Bluetooth Special Interest Group (SIG), *Core Specification Version 5.3*, In-Halt: Vol. 6, Part B, 2021.
+[2] Python Software Foundation, *Python 3 Documentation: asyncio — Asynchronous I/O*, Disponible en: https://docs.python.org/3/library/asyncio.html. [Accedido: Oct. 2026].
+[3] C. Knight et al., *Bleak: Bluetooth Low Energy platform agnostics client for Python*, GitHub Repository, Disponible en: https://github.com/hbldh/bleak. [Accedido: Oct. 2026].
+[4] W. Stallings, *Cryptography and Network Security: Principles and Practice*, 7va ed., Pearson, 2017.
 
 ### 2.3 Breve Análisis de Riesgos (Seguridad y Legalidad)
 
