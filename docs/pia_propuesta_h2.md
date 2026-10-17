@@ -33,17 +33,32 @@
 
 ## 1.2 Montaje del Enlace (Diagrama / Croquis y Software)
 
+## 1.2 Montaje del Enlace (Diagrama / Croquis y Software)
+
 ```mermaid
 flowchart LR
     subgraph Emisor [Smartphone / Emisor BLE]
-        A["📱 Dispositivo Móvil<br/>(Banda 2.4 GHz)"]
+        A["📱 Dispositivo Móvil<br/>(Transmisor BLE 2.4 GHz)"]
     end
 
-    A ==>|"📡 📶 🔵<br/>Ondas RF / Enlace Bluetooth<br/>(Distancia variable 'd')"| B
+    subgraph Canal [Canal Inalámbrico RF]
+        C1((( )))
+        C2((( )))
+        C3((( )))
+    end
 
     subgraph Receptor [Laptop / Estación Base]
         B["💻 Adaptador Bluetooth Interno<br/>+ Script Python (Bleak)"]
     end
+
+    A ==>|"🔵 Señal BLE<br/>(Distancia 'd')"| C1
+    C1 ~~~ C2 ~~~ C3
+    C3 ==>|"Métricas RSSI"| B
+
+    style Canal fill:transparent,stroke:none
+    style C1 fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style C2 fill:#b3e5fc,stroke:#0288d1,stroke-width:2px
+    style C3 fill:#81d4fa,stroke:#0288d1,stroke-width:2px
 ```
 
 - **Descripción del Montaje:** El teléfono inteligente actúa como emisor enviando tramas de prueba por BLE en la banda de 2.4 GHz hacia la laptop (receptor). Ambos dispositivos se colocan en línea de vista directa a una distancia inicial $d_0 = 1.0\text{ m}$.
