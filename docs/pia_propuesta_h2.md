@@ -31,10 +31,6 @@
 
 ## 1.2 Montaje del Enlace (Diagrama / Croquis y Software)
 
-## 1.2 Montaje del Enlace (Diagrama / Croquis y Software)
-
-## 1.2 Montaje del Enlace (Diagrama / Croquis y Software)
-
 ```mermaid
 flowchart LR
     subgraph Emisor [Smartphone / Emisor BLE]
