@@ -24,17 +24,23 @@
 - **Medio:** Bluetooth Low Energy (BLE) / Bluetooth (Teléfono ↔ Laptop).
 
 ### 1.2 Montaje del Enlace (Diagrama / Croquis)
+## 1.1 Medio Seleccionado
+* **Medio:** Bluetooth Low Energy (BLE) / Comunicación bidireccional (Teléfono Inteligente ⟷ Laptop).
+* **Hardware de Interfaz:** Se utilizará el **adaptador Bluetooth interno** integrado de fábrica en la laptop (compatible con la capa BLE nativa del sistema operativo), evitando la necesidad de adquirir adaptadores o hardware externo adicional (costo cero).
+* **Software de Adquisición:** Se empleará un **script de desarrollo propio en Python** utilizando la librería asíncrona `bleak`, el cual se encargará de establecer el enlace activo, escanear el entorno y registrar métricas de potencia de señal (RSSI).
+
+## 1.2 Montaje del Enlace (Diagrama / Croquis y Software)
 
 ```mermaid
 flowchart LR
-    subgraph Emisor [Smartphone BLE]
-        A["Emisor Trama BLE<br/>(2.4 GHz)"]
+    subgraph Emisor [Smartphone POCO M5s]
+        A["Emisor Trama BLE<br/>(Banda 2.4 GHz)"]
     end
 
     A ==>|"Canal Inalámbrico<br/>(Distancia variable 'd')"| B
 
-    subgraph Receptor [Laptop con Adaptador]
-        B["Receptor RF<br/>(Medición RSSI en dBm)"]
+    subgraph Receptor [Laptop]
+        B["Adaptador Bluetooth Interno<br/>+ Script Python (Bleak)"]
     end
 ```
 
