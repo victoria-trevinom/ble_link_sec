@@ -101,12 +101,9 @@ A continuación se muestra el comportamiento esperado de la curva de atenuación
 ## 2. Evidencia de Primera Señal, Fuentes y Riesgos (C2)
 
 ### 2.1 🎥 Evidencia Audiovisual del Enlace y Modelo Matemático
-Demostración práctica del funcionamiento de la interfaz gráfica, el procesamiento del RSSI y la generación de la gráfica de atenuación en la banda de 2.4 GHz:
+Demostración práctica del funcionamiento de la interfaz gráfica, la consola analítica y la ejecución del modelo de propagación en la banda de 2.4 GHz:
 
-<video width="100%" controls>
-  <source src="docs/pia_h2_primera_senal.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de video.
-</video>
+👉 **[📥 Ver o descargar video de evidencia de la primera señal (MP4)](docs/pia_h2_primera_senal.mp4)**
 
 ### 2.2 Fuentes Verificables (Formato IEEE)
 ---
