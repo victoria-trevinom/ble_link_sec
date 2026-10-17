@@ -27,3 +27,27 @@ Si vas a probar el programa en tu computadora para verificar la comunicación co
 * Colócate en la carpeta donde descargaste o clonaste el proyecto. Por ejemplo, si lo guardaste en tu Escritorio:
   ```bash
   cd Desktop/ble_link_sec
+  ```
+
+### 3. Instalar las herramientas necesarias
+Ejecuta el siguiente comando para que la computadora descargue automáticamente las librerías que el programa utiliza (para la interfaz gráfica y el Bluetooth):
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Ejecutar el programa
+Entra a la carpeta del programa y lánzalo con este comando:
+```bash
+cd ble_link_sec/ble_link_sec
+python test_ble.py
+```
+
+### 5. Cómo realizar la prueba del enlace en vivo
+1. En tu teléfono celular, entra a **Ajustes > Bluetooth** y déjate en esa pantalla para que el dispositivo sea visible.
+2. En la ventana que se abrió en la computadora, escribe el nombre exacto de tu celular en el espacio indicado.
+3. Haz clic en el botón **"📡 Buscar y Conectar al Enlace"**.
+4. La pantalla de la aplicación te mostrará el avance:
+   * Encontrará la dirección MAC de tu teléfono.
+   * Establecerá el enlace físico por Bluetooth de manera automática.
+   * Solicitará los servicios remotos (`GATT`), mostrando en la consola de la app el mensaje de éxito de que **el bit y los datos del enlace ya están activos y fluyendo**.
+5. Si llega a haber algún problema de conexión, solo haz clic en el botón **"💡 ¿Qué hacer si no se conecta?"** dentro de la misma aplicación para ver los consejos de solución paso a paso.
