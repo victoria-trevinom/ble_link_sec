@@ -106,7 +106,8 @@ A continuación se muestra el comportamiento esperado de la curva de atenuación
 
 ### 2.2 Fuentes Verificables (Formato IEEE)
 ---
-
+Bleak Developers. (2023). Bleak: Bluetooth Low Energy platform Agnostic Klient for Python (Version 0.21.1) [Software de computación]. GitHub. https://github.com/hbldh/bleak<br/>2. Python Software Foundation (Logica del parser CLI): Python Software Foundation. (2026). argparse - Parser for command-line options, arguments and sub-commands (Python Standard Library v3.11) [Software de computacion]. https://docs.python.org/3/library/argparse.html<br/>3. Ejemplo de servidor GATT BLE: Blum, R. (2020). Python Bluetooth LE GATT Server Example [Codigo fuente]. https://github.com/hbldh/bleak/tree/develop/examples.<br/>4 N. Pavur, R. A. Calvo, and J. A. Clark, "Security and Privacy Threats for Bluetooth Low Energy in IoT and Wearable Devices: A Comprehensive Survey," IEEE Xplore, [En línea]. Disponible en: https://ieeexplore.ieee.org/document/9706334 [Accedido: 15-oct-2026].<br/>5. M. Ryan, "Bluetooth: With Low Energy comes Low Security," in Proceedings of the 7th USENIX, [En línea]. Disponible en:
+https://www.usenix.org/conference/woot13/workshop-program/presentation/ryan?hl=es-US/ [Accedido: 15-oct-2026].<br/>6. Campus Ciberseguridad, "Seguridad de los dispositivos BLE," Campus Ciberseguridad, [En línea]. Disponible en: https://www.campusciberseguridad.com/blog-alumno/seguridad-de-los-dispositivos-ble/ [Accedido: 15-oct-2026].<hr/><h2>Instalacion y Uso</h2><pre>pip install -r requirements.txt`npython main.py --scan`npython main.py --receive</pre>
 
 ### 2.3 Breve Análisis de Riesgos (Seguridad y Legalidad)
  ## Análisis de Riesgos y Legalidad
