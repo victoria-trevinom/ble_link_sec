@@ -5,6 +5,4 @@
  ## Análisis de Riesgos y Legalidad
 
 
- - **Riesgos de Seguridad Técnico-Operativos:**
-
- -  Intercepción de trafico
+ - **Riesgos de Seguridad Técnico-Operativos:** Intercepción de trafico; dado que los dispositivos BLE se comunican en el canal inalámbrico, cualquier persona con un dispositivo de análisis de paquetes, como Ubertooth o SmartRF Sniffer, puede interceptar la comunicación, pero una vez se intercepta 
