@@ -6,5 +6,5 @@
 
 
  - **Riesgos de Seguridad Técnico-Operativos:**
- - **-Intercepción de trafico** Dado que los dispositivos BLE se comunican en el canal inalámbrico, cualquier persona con un dispositivo de análisis de paquetes, como Ubertooth o SmartRF Sniffer, puede interceptar la comunicación. Se recomienda a los usuarios utilizar opciones de emparejamiento seguras, como la comparación numérica, el acceso fuera de rango o, al menos, la introduccion de una clave de acceso.
-- **-Ataques de Hombre en el Medio (MitM):** Aquí si el mecanismo de emparejamiento o vinculacion es debil, un dispositivo malicioso puede suplantar la identidad de la laptop y/o celular y hasta modificar y alterar el flujo de datos.
+ -   **1. Intercepción de trafico** Dado que los dispositivos BLE se comunican en el canal inalámbrico, cualquier persona con un dispositivo de análisis de paquetes, como Ubertooth o SmartRF Sniffer, puede interceptar la comunicación. Se recomienda a los usuarios utilizar opciones de emparejamiento seguras, como la comparación numérica, el acceso fuera de rango o, al menos, la introduccion de una clave de acceso.
+-    **2. Ataques de Hombre en el Medio (MitM):** Aquí si el mecanismo de emparejamiento o vinculacion es debil, un dispositivo malicioso puede suplantar la identidad de la laptop y/o celular y hasta modificar y alterar el flujo de datos.
