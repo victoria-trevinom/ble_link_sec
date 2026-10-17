@@ -31,16 +31,18 @@
 
 ## 1.2 Montaje del Enlace (Diagrama / Croquis y Software)
 
+## 1.2 Montaje del Enlace (Diagrama / Croquis y Software)
+
 ```mermaid
 flowchart LR
-    subgraph Emisor [Smartphone POCO M5s]
-        A["Emisor Trama BLE<br/>(Banda 2.4 GHz)"]
+    subgraph Emisor [Smartphone / Emisor BLE]
+        A["📱 Dispositivo Móvil<br/>(Banda 2.4 GHz)"]
     end
 
-    A ==>|"Canal Inalámbrico<br/>(Distancia variable 'd')"| B
+    A ==>|"📡 📶 🔵<br/>Ondas RF / Enlace Bluetooth<br/>(Distancia variable 'd')"| B
 
-    subgraph Receptor [Laptop]
-        B["Adaptador Bluetooth Interno<br/>+ Script Python (Bleak)"]
+    subgraph Receptor [Laptop / Estación Base]
+        B["💻 Adaptador Bluetooth Interno<br/>+ Script Python (Bleak)"]
     end
 ```
 
