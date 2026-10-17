@@ -60,9 +60,33 @@ flowchart LR
 - **Descripción del Montaje:** El teléfono inteligente actúa como emisor enviando tramas de prueba por BLE en la banda de 2.4 GHz hacia la laptop (receptor). Ambos dispositivos se colocan en línea de vista directa a una distancia inicial $d_0 = 1.0\text{ m}$.
 
 ### 1.3 Fenómeno Físico y Variable de Estudio
-- **Fenómeno Físico a Medir:** Atenuación de la potencia de la señal de radiofrecuencia (RF) recibida (RSSI en dBm) y pérdida por trayectoria en el canal inalámbrico.
-- **Variable a Variar:** Distancia física ($d$) entre el emisor y el receptor (de $0.5\text{ m}$ a $5.0\text{ m}$ en incrementos de $0.5\text{ m}$).
 
+- **Fenómeno Físico a Medir:** Atenuación de la potencia de la señal de radiofrecuencia (RF) recibida en la banda industrial, científica y médica (ISM) de $2.4\text{ GHz}$ mediante Bluetooth Low Energy (BLE). Se captura en tiempo real el indicador de intensidad de la señal recibida ($RSSI$ en $\text{dBm}$) utilizando el adaptador interno de la laptop y la librería asíncrona de Python `bleak`.
+- **Variable a Variar:** Distancia física ($d$) entre el dispositivo móvil emisor y la laptop receptora, establecida en un rango de $0.5\text{ m}$ a $5.0\text{ m}$ con incrementos controlados de $0.5\text{ m}$ para evaluar la degradación de la potencia.
+- **Procesamiento y Modelado Automatizado:** 
+  - Mediante la interfaz gráfica desarrollada en `customtkinter`, el sistema toma las muestras físicas de la señal y aplica el **Modelo de Pérdida por Trayectoria (*Log-Distance Path Loss Model*)**, cuya función matemática describe la caída logarítmica del $RSSI$ respecto a la distancia:
+    $$RSSI(d) = RSSI(d_0) - 10 \cdot n \cdot \log_{10}\left(\frac{d}{d_0}\right)$$
+    Donde $RSSI(d_0)$ es la potencia de referencia a una distancia inicial $d_0 = 1.0\text{ m}$ y $n$ representa el exponente de pérdida por trayectoria.
+  - A partir de este modelo, el script despeja y calcula la **distancia estimada ($\hat{d}$)** en tiempo real:
+    $$\hat{d} = d_0 \cdot 10^{\left( \frac{RSSI(d_0) - RSSI(d)}{10 \cdot n} \right)}$$
+  - A través de la librería científica `matplotlib`, el software procesa los datos y genera de forma automática una ventana gráfica interactiva que ilustra la curva de atenuación del enlace, permitiendo validar empíricamente la estabilidad del canal de comunicación.
+
+---
+
+A continuación se muestra el comportamiento esperado de la curva de atenuación del $RSSI$ en función de la distancia física, derivado del modelo logarítmico aplicado en las pruebas:
+
+```text
+  RSSI (dBm)
+  -40 |  *
+  -50 |     *
+  -60 |        *
+  -70 |           *
+  -80 |              *
+  -90 |                 *
+      +-------------------------> Distancia (d)
+       0.5m  1.0m  2.0m  3.0m  5.0m
+```
+    
 ### 1.4 Lista de Materiales y Costos
 | Cantidad | Material / Componente | Función en el Montaje | Costo ($) |
 | :---: | :--- | :--- | :---: |
