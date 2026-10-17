@@ -24,14 +24,23 @@
 - **Medio:** Bluetooth Low Energy (BLE) / Bluetooth (Teléfono ↔ Laptop).
 
 ### 1.2 Montaje del Enlace (Diagrama / Croquis)
-```
-  [ Emisor: Smartphone BLE ]
-             │ (Transmisión RF @ 2.4 GHz)
-             ▼
-    [ Canal Inalámbrico ] ─── (Distancia variable 'd', atenuación / interferencia)
-             │
-             ▼
-  [ Receptor: Laptop con BLE ]
+
+```mermaid
+flowchart TD
+    subgraph Emisor [Smartphone BLE]
+        A[Emisor de Trama BLE <br/> Banda 2.4 GHz]
+    end
+
+    A ==>|Canal Inalámbrico <br/> Distancia variable 'd'| B
+
+    subgraph Receptor [Laptop con Adaptador BLE]
+        B[Receptor de RF <br/> Medición de RSSI en dBm]
+    end
+
+    style Emisor fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style Receptor fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style B fill:#c8e6c9,stroke:#388e3c,stroke-width:1px
+    style A fill:#b3e5fc,stroke:#0288d1,stroke-width:1px
 ```
 - **Descripción del Montaje:** El teléfono inteligente actúa como emisor enviando tramas de prueba por BLE en la banda de 2.4 GHz hacia la laptop (receptor). Ambos dispositivos se colocan en línea de vista directa a una distancia inicial $d_0 = 1.0\text{ m}$.
 
