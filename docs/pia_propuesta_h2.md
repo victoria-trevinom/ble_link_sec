@@ -62,10 +62,7 @@ flowchart LR
 - **Enlace al Video:** `[Insertar enlace de evidencia: Google Drive / OneDrive / YouTube]`
 
 ### 2.2 Fuentes Verificables (Formato IEEE)
-1. C. Gómez, J. Oller, and J. Paradells, "Overview and evaluation of Bluetooth Low Energy: An emerging technology for low-power wireless sensor networks," *IEEE Communications Magazine*, vol. 50, no. 9, pp. 117-125, Sep. 2012.
-2. M. Woolley, "Bluetooth Low Energy Security: An Introduction," *Bluetooth SIG White Paper*, IEEE Standards Association, 2019.
-3. T. Heyerdahl and R. S. Sørby, "Analysis of Signal Attenuation and Bit Error Rate in BLE 2.4 GHz Links," *IEEE Transactions on Wireless Communications*, vol. 19, no. 4, pp. 2410-2418, Apr. 2020.
+
 
 ### 2.3 Breve Análisis de Riesgos (Seguridad y Legalidad)
-- **Reglas de Seguridad Física:** Operación a baja potencia de emisión ($\le 10\text{ mW}$), eliminando riesgos de radiación o choques eléctricos. Manejo ordenado de los equipos.
-- **Legalidad del Espectro:** Transmisión en la banda libre ISM (Industrial, Scientific, and Medical) de 2.4 GHz conforme a la normativa del IFT y el estándar IEEE 802.15.1, garantizando un experimento legal y sin interferencias no autorizadas.
+
