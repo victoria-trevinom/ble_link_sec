@@ -100,7 +100,10 @@ A continuación se muestra el comportamiento esperado de la curva de atenuación
 
 ## 2. Evidencia de Primera Señal, Fuentes y Riesgos (C2)
 
-### 2.1 👉 **[📥 Ver o descargar video de evidencia de la primera señal (MP4)](pia_h2_primera_senal.mp4)**
+## 2.1 🎥 Evidencia Audiovisual del Enlace y Modelo Matemático
+Demostración práctica del funcionamiento de la interfaz gráfica, la consola analítica y la ejecución del modelo de propagación en la banda de 2.4 GHz:
+
+👉 **[Ver Video de Demostración del Enlace BLE (Gofile)](https://gofile.io/d/H5Rl06qF)**
 
 ### 2.2 Fuentes Verificables (Formato IEEE)
 ---
