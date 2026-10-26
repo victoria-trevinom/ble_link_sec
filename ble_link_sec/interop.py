@@ -1,22 +1,63 @@
-"""Módulo de interoperabilidad y
-gestión de servicios GATT."""
+﻿"""Módulo de interoperabilidad GATT y escaneo con Bleak."""
+import asyncio
+from bleak import BleakScanner, BleakClient
 
 
-class BLEInteropHandler:
-    """Gestiona el intercambio de
-    datos entre cliente y servidor."""
+async def escanear_dispositivos(timeout: int = 5):
+    """Escanea dispositivos Bluetooth Low Energy (BLE)."""
+    dispositivos = await BleakScanner.discover(timeout=timeout)
+    resultados = []
+    for d in dispositivos:
+        resultados.append({
+            "nombre": d.name or "Desconocido",
+            "direccion": d.address,
+            "rssi": d.rssi,
+        })
+    return resultados
 
-    def __init__(self, uuid_servicio: str):
-        self.uuid_servicio = uuid_servicio
-        self.conectado = False
 
-    def establecer_conexion(self, direccion_mac: str) -> bool:
-        """Establece la conexión lógica
-        con el dispositivo remoto."""
-        self.conectado = True
-        return self.conectado
+async def mantener_conexion(
+    direccion_mac: str, uuid_caracteristica: str = None
+):
+    """Conecta a un dispositivo BLE y mantiene el
 
-    def empaquetar_payload(self, mensaje: str) -> bytes:
-        """Convierte texto en flujo
-        de bytes para BLE."""
-        return mensaje.encode("utf-8")
+    enlace mediante notificaciones GATT.
+    """
+    def callback_notificacion(sender, data):
+        print(f"[Datos recibidos de {sender}]: {data.hex()}")
+
+    def callback_desconexion(client):
+        print("[-] El dispositivo se ha desconectado.")
+
+    async with BleakClient(
+        direccion_mac,
+        disconnected_callback=callback_desconexion
+    ) as client:
+        print(
+            f"[+] Conectado exitosamente a {direccion_mac}. "
+            "Manteniendo enlace..."
+        )
+
+        # Si el dispositivo tiene una característica
+        # de notificación, nos suscribimos
+        if uuid_caracteristica:
+            try:
+                await client.start_notify(
+                    uuid_caracteristica, callback_notificacion
+                )
+                print("[+] Suscrito a notificaciones GATT.")
+            except Exception as e:
+                print(
+                    "[-] No se pudo suscribir a "
+                    f"la característica: {e}"
+                )
+
+        # Mantener el bucle abierto escuchando los eventos BLE
+        while client.is_connected():
+            await asyncio.sleep(1.0)
+
+        if uuid_caracteristica:
+            try:
+                await client.stop_notify(uuid_caracteristica)
+            except Exception:
+                pass
